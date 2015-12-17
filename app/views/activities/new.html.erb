@@ -1,0 +1,11 @@
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+	<h1>Enter Your Activity Details</h1>
+		<%= simple_form_for @activity do |f| %>
+			<%= f.input :name %>
+			<%= f.input :description %>
+			<%= f.input :distance %>
+			<%= f.input :activity_type %>
+			<br />
+			<%= f.submit 'Create', :class => 'btn btn-primary' %>
+		<% end %>
+	</div>

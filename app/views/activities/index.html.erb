@@ -1,0 +1,12 @@
+<% @activities.each do |activity| %>
+  	<div class="booyah-box col-xs-10 col-xs-offset-1">
+    	<h1><%= link_to activity.name, activity_path(activity) %></h1><br />
+    	<i><%= activity.description %></i><br /><br />
+    	<p><%= activity.distance %></p><br />
+    	<p><%= activity.activity_type %></p><br />
+
+    	<% if activity.user.present? %>
+    		<small><%= activity.user.email %> </small>
+    	<% end %>	
+  	</div>
+<% end %>
